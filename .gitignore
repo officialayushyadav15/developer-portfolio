@@ -1,0 +1,48 @@
+# Local environment files and secrets. Keep the placeholder template shareable.
+.env
+.env.*
+!.env.example
+
+# Netlify local development state and cache.
+.netlify/
+
+# Reference material kept locally and not required for the deployed site.
+/reference/
+
+# Operating system metadata.
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor and IDE workspace state.
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs, temporary files, backups, archives, and local test output.
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*.zip
+*.7z
+*.tar
+*.gz
+coverage/
+test-results/
+
+# Dependency folders (none are currently present in this repository).
+node_modules/
+
+# Private keys, certificates, and credential files.
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.json
+service-account*.json

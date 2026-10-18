@@ -1,0 +1,1135 @@
+.experience-page {
+    padding: 13px 17px 14px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 383px;
+    gap: 17px;
+    align-items: start;
+}
+
+.experience-card,
+.side-card {
+    border-color: #113154;
+    background:
+        radial-gradient(circle at 82% 16%, rgba(19, 82, 165, .13), transparent 31%),
+        linear-gradient(145deg, rgba(7, 18, 32, .96), rgba(3, 12, 23, .94));
+}
+
+.experience-card {
+    min-width: 0;
+    padding: 20px 18px 18px;
+}
+
+.experience-hero {
+    margin-bottom: 19px;
+}
+
+.experience-title-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.experience-title-row h1 {
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.experience-hero p {
+    margin-top: 13px;
+    color: #f4f7ff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.blue-icon,
+.edu-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    color: #fff;
+    background: linear-gradient(145deg, #1971ff, #173ed7);
+    box-shadow:
+        0 10px 22px rgba(22, 93, 255, .28),
+        inset 0 1px 0 rgba(255, 255, 255, .17);
+}
+
+.blue-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
+.blue-icon svg,
+.edu-icon svg,
+.side-card h2 svg,
+.location svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #12375e;
+    border-radius: 8px;
+    background: linear-gradient(
+        145deg,
+        rgba(5, 19, 35, .78),
+        rgba(4, 16, 31, .74)
+    );
+}
+
+.stats-bar article {
+    display: grid;
+    grid-template-columns: 49px minmax(0, 1fr);
+    column-gap: 15px;
+    align-items: center;
+    min-height: 57px;
+    padding: 0 21px;
+    border-right: 1px solid rgba(31, 59, 91, .65);
+}
+
+.stats-bar article:first-child {
+    padding-left: 0;
+}
+
+.stats-bar article:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+.stat-icon {
+    grid-row: span 2;
+    width: 49px;
+    height: 49px;
+    border-radius: 9px;
+}
+
+.stats-bar strong {
+    color: #fff;
+    font-size: 30px;
+    line-height: 31px;
+}
+
+.stats-bar article > span:last-child {
+    color: #eef5ff;
+    font-size: 14px;
+    line-height: 1.35;
+    white-space: nowrap;
+}
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.timeline-card {
+    position: relative;
+    padding: 15px 16px 25px;
+    border: 1px solid #12375e;
+    border-radius: 8px;
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(21, 96, 185, .11),
+            transparent 34%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(4, 17, 31, .83),
+            rgba(4, 15, 28, .8)
+        );
+}
+
+.timeline-card h2,
+.timeline-section-title {
+    color: #4386ff;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.timeline-card > h2 {
+    margin-bottom: 14px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    --date-col: 105px;
+    --axis-col: 46px;
+    --content-gap: 21px;
+
+    /*
+       Position of timeline axis:
+       date column + gap + half of axis column
+    */
+    --axis-center: calc(
+        var(--date-col) +
+        var(--content-gap) +
+        (var(--axis-col) / 2)
+    );
+
+    position: relative;
+}
+
+/*
+   IMPORTANT:
+   The old timeline line extended through the entire
+   timeline, including education.
+
+   Keep this line only for the professional experience
+   row.
+*/
+.timeline::before {
+    content: none;
+}
+
+/* Experience-specific vertical line */
+.experience-row {
+    position: relative;
+}
+
+.experience-row::before {
+    content: "";
+    position: absolute;
+
+    /*
+       Start at the experience marker.
+       This prevents the line from appearing above
+       the first timeline point.
+    */
+    top: 22px;
+
+    /*
+       Stop shortly after the final responsibility.
+       It will no longer continue into education.
+    */
+    bottom: 34px;
+
+    left: var(--axis-center);
+
+    width: 2px;
+    border-radius: 2px;
+
+    background: linear-gradient(
+        to bottom,
+        #78a9ff 0%,
+        #7189b8 100%
+    );
+
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/*
+   Keep the experience marker above the line.
+*/
+.experience-row .timeline-marker {
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-row {
+    display: grid;
+    grid-template-columns:
+        var(--date-col)
+        var(--axis-col)
+        minmax(0, 1fr);
+
+    column-gap: var(--content-gap);
+    position: relative;
+}
+
+.timeline-section-title {
+    margin: 28px 0 12px;
+}
+
+/* =========================
+   DATES
+========================= */
+
+.timeline-date {
+    grid-column: 1;
+    color: #d9e2f1;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.experience-row .timeline-date {
+    padding-top: 1px;
+}
+
+.timeline-date b {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 23px;
+    margin-top: 10px;
+    padding: 0 9px;
+
+    border-radius: 5px;
+
+    color: #fff;
+    background: linear-gradient(
+        100deg,
+        #2871ff,
+        #1746dc
+    );
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* =========================
+   TIMELINE MARKERS
+========================= */
+
+.timeline-marker {
+    grid-column: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-dot {
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    margin-top: 12px;
+
+    border: 2px solid #4a8cff;
+    border-radius: 50%;
+
+    background: #061426;
+
+    box-shadow:
+        0 0 0 3px rgba(27, 92, 255, .25),
+        0 0 14px rgba(33, 113, 255, .82);
+}
+
+.timeline-dot::after {
+    content: "";
+
+    display: block;
+
+    width: 8px;
+    height: 8px;
+
+    margin: 4px;
+
+    border-radius: 50%;
+
+    background: #78b2ff;
+}
+
+/* =========================
+   EXPERIENCE CONTENT
+========================= */
+
+.timeline-body {
+    grid-column: 3;
+    min-width: 0;
+}
+
+.role-head {
+    display: block;
+}
+
+.role-head h3,
+.education-body h3 {
+    color: #f8fbff;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.role-head a,
+.education-body a {
+    display: inline-block;
+    margin-top: 7px;
+    color: #2d95ff;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 8px;
+
+    color: #c4cedd;
+    font-size: 14px;
+}
+
+.location svg {
+    width: 15px;
+    height: 15px;
+
+    color: #9fb4d7;
+
+    fill: currentColor;
+    stroke: none;
+}
+
+/* =========================
+   TECHNOLOGY TAGS
+========================= */
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 18px 0;
+}
+
+.tech-tags span {
+    min-height: 32px;
+
+    padding: 7px 12px;
+
+    border: 1px solid #1b4d86;
+    border-radius: 6px;
+
+    color: #acd1ff;
+    background: rgba(4, 24, 44, .8);
+
+    font-size: 13px;
+}
+
+/* =========================
+   RESPONSIBILITIES
+========================= */
+
+.responsibilities,
+.check-list,
+.tool-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.responsibilities {
+    display: grid;
+    gap: 12px;
+
+    color: #d4dce9;
+
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.responsibilities li {
+    position: relative;
+    padding-left: 0;
+}
+
+.responsibilities li::before {
+    content: "\2022";
+
+    margin-right: 6px;
+
+    color: #aab7c9;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+/*
+   Creates a visible gap between Experience
+   and Education when both are separate cards.
+*/
+.education-card {
+    margin-top: 24px;
+}
+
+/*
+   If Education is still rendered inside the same
+   timeline card, create visual separation around
+   the Education heading.
+*/
+.timeline-section-title {
+    margin-top: 30px;
+    padding-top: 4px;
+}
+
+/*
+   Education must NOT inherit the experience line.
+*/
+.education-row {
+    position: relative;
+   min-height: 68px;
+    align-items: center;
+}
+
+.education-timeline::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    bottom: 22px;
+    left: var(--axis-center);
+    width: 2px;
+    border-radius: 2px;
+    background: linear-gradient(
+        to bottom,
+        #78a9ff 0%,
+        #7189b8 100%
+    );
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/*
+   Education gets its own short axis line.
+   It starts at the first education marker and
+   ends after the last education marker.
+*/
+.education-row .timeline-dot {
+    margin-top: 12px;
+}
+
+.education-row .timeline-date {
+   font-size: 13px;
+}
+
+.education-body {
+   display: grid;
+
+   grid-template-columns:
+       38px
+       minmax(0, 1fr);
+
+   gap: 14px;
+
+   align-items: center;
+   min-width: 0;
+   max-width: 100%;
+}
+
+.education-body > div {
+   min-width: 0;
+   max-width: 100%;
+}
+
+.edu-icon {
+   width: 38px;
+   height: 38px;
+   border-radius: 8px;
+}
+
+.education-body h3 {
+   max-width: 100%;
+   font-size: 16px;
+   line-height: 1.2;
+   overflow-wrap: anywhere;
+   word-break: normal;
+}
+
+.education-body a {
+    margin-top: 5px;
+   max-width: 100%;
+   font-size: 14px;
+   overflow-wrap: anywhere;
+   word-break: normal;
+}
+
+.education-body p {
+   margin-top: 5px;
+
+   color: #d7deeb;
+
+   font-size: 13px;
+   line-height: 1.3;
+   max-width: 100%;
+   overflow-wrap: anywhere;
+   word-break: normal;
+}
+
+/*
+   Education timeline should be visually compact.
+*/
+.education-row + .education-row {
+   margin-top: 14px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.experience-sidebar {
+    display: grid;
+    gap: 17px;
+    align-content: start;
+}
+
+.side-card {
+    padding: 20px;
+    min-width: 0;
+}
+
+.side-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid rgba(32, 58, 87, .72);
+
+    color: #f7faff;
+
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.side-card h2 svg {
+    width: 23px;
+    height: 23px;
+
+    color: #177dff;
+}
+
+/* =========================
+   EXPERIENCE OVERVIEW
+========================= */
+
+.overview-list {
+    margin: 0;
+}
+
+.overview-list div {
+    display: grid;
+    gap: 6px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(31, 56, 85, .55);
+}
+
+.overview-list div:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.overview-list dt {
+    color: #c5cfdd;
+    font-size: 14px;
+}
+
+.overview-list dd {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* =========================
+   WHAT I DO
+========================= */
+
+.check-list {
+    display: grid;
+    gap: 17px;
+
+    padding-top: 14px;
+}
+
+.check-list li {
+    position: relative;
+
+    padding-left: 30px;
+
+    color: #d4dce8;
+
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.check-list li::before {
+    content: "\2713";
+
+    position: absolute;
+
+    left: 0;
+    top: -1px;
+
+    display: grid;
+    place-items: center;
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50%;
+
+    color: #06281d;
+    background: #1bd293;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+/* =========================
+   TOOLS
+========================= */
+
+.tool-list {
+    display: grid;
+    gap: 8px;
+
+    padding-top: 14px;
+}
+
+.tool-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    min-height: 43px;
+
+    padding: 8px 12px;
+
+    border: 1px solid #102f50;
+    border-radius: 7px;
+
+    background: rgba(3, 18, 32, .62);
+
+    color: #f2f6ff;
+
+    font-size: 14px;
+}
+
+/*
+   All tool logos use a fixed box.
+   This prevents different logo shapes from
+   shifting the text position.
+*/
+.tool-logo {
+    display: grid;
+    place-items: center;
+
+    width: 30px;
+    min-width: 30px;
+    height: 24px;
+
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* =========================
+   SALESFORCE
+========================= */
+
+.tool-logo.salesforce {
+    width: 34px;
+    min-width: 34px;
+    height: 24px;
+
+    color: #00a1e0;
+}
+
+.tool-logo.salesforce svg {
+    display: block;
+
+    width: 34px;
+    height: 24px;
+
+    fill: currentColor;
+}
+
+.tool-logo.salesforce text {
+    fill: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0;
+}
+
+/* =========================
+   VS CODE
+========================= */
+
+.tool-logo.vscode {
+    color: #168cff;
+}
+
+.tool-logo.vscode svg {
+    display: block;
+
+    width: 27px;
+    height: 27px;
+
+    fill: currentColor;
+}
+
+/* =========================
+   GITHUB
+========================= */
+
+.tool-logo.github {
+    width: 27px;
+    min-width: 27px;
+    height: 27px;
+
+    color: #f4f6fb;
+}
+
+.tool-logo.github svg {
+    display: block;
+    width: 27px;
+    height: 27px;
+}
+
+/* =========================
+   SERVICENOW
+========================= */
+
+.tool-logo.servicenow {
+    width: 78px;
+    min-width: 78px;
+    height: 24px;
+
+    color: #ffffff;
+}
+
+.tool-logo.servicenow svg {
+    display: block;
+    width: 78px;
+    height: 24px;
+}
+
+/* =========================
+   SAP
+========================= */
+
+.tool-logo.sap {
+    width: 30px;
+    min-width: 30px;
+
+    color: #fff;
+    background: #0b87d8;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        78% 100%,
+        0 100%
+    );
+
+    font-size: 10px;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+body:not(.light-theme) .experience-card,
+body:not(.light-theme) .side-card,
+body:not(.light-theme) .stats-bar,
+body:not(.light-theme) .timeline-card,
+body:not(.light-theme) .tool-list li {
+    border-color: #113154;
+}
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+body.light-theme .experience-card,
+body.light-theme .side-card,
+body.light-theme .stats-bar,
+body.light-theme .timeline-card,
+body.light-theme .tool-list li {
+    border-color: #d7e2f0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .96),
+            rgba(248, 251, 255, .92)
+        );
+}
+
+/*
+   Match the Home page light-mode typography.
+*/
+body.light-theme .experience-hero p,
+body.light-theme .stats-bar article > span:last-child,
+body.light-theme .timeline-date,
+body.light-theme .responsibilities,
+body.light-theme .education-body p,
+body.light-theme .check-list li,
+body.light-theme .tool-list li {
+    color: #26364d;
+}
+
+body.light-theme .role-head h3,
+body.light-theme .education-body h3 {
+    color: #162338;
+}
+
+body.light-theme .overview-list dd {
+    color: #162338;
+}
+
+body.light-theme .overview-list dt {
+    color: #65758c;
+}
+
+body.light-theme .side-card h2 {
+    color: #1a2940;
+}
+
+body.light-theme .stats-bar strong {
+    color: #162338;
+}
+
+body.light-theme .stats-bar article,
+body.light-theme .side-card h2,
+body.light-theme .overview-list div {
+    border-color: #dce5ef;
+}
+
+body.light-theme .tech-tags span {
+    border-color: #c9dcfb;
+
+    color: #155eef;
+    background: #eef5ff;
+}
+
+body.light-theme .location {
+    color: #53657d;
+}
+
+body.light-theme .location svg {
+    color: #7d9ac3;
+}
+
+body.light-theme .responsibilities li::before {
+    color: #71839b;
+}
+
+body.light-theme .tool-list li {
+    color: #24344a;
+    background: rgba(255, 255, 255, .78);
+}
+
+body.light-theme .tool-logo.github {
+    color: #24292f;
+}
+
+body.light-theme .tool-logo.servicenow {
+    color: #1f2f44;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1320px) {
+    .experience-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            350px;
+    }
+
+    .stats-bar {
+        padding: 16px;
+    }
+
+    .stats-bar article {
+        padding: 0 13px;
+    }
+
+    .stats-bar strong {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-sidebar {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 860px) {
+    .stats-bar {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+    .stats-bar article {
+        padding: 0;
+        border-right: 0;
+    }
+
+    .experience-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .experience-page {
+        padding: 12px;
+    }
+
+    .experience-card,
+    .side-card {
+        padding: 16px;
+    }
+
+    .experience-title-row h1 {
+        font-size: 25px;
+    }
+
+    .stats-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-bar article > span:last-child {
+        white-space: normal;
+    }
+
+    .timeline-card {
+        padding: 15px 12px 24px;
+    }
+
+    .timeline {
+        --date-col: 0px;
+        --axis-col: 28px;
+        --content-gap: 10px;
+    }
+
+    /*
+       Mobile experience line.
+    */
+    .experience-row::before {
+        left: calc(
+            var(--date-col) +
+            var(--content-gap) +
+            (var(--axis-col) / 2)
+        );
+
+        top: 29px;
+        bottom: 34px;
+    }
+
+    .timeline-row {
+        grid-template-columns:
+            var(--date-col)
+            var(--axis-col)
+            minmax(0, 1fr);
+
+        column-gap: var(--content-gap);
+    }
+
+    .timeline-date {
+        grid-column: 3;
+        font-weight: 600;
+    }
+
+    .experience-row .timeline-date {
+        padding-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .experience-row .timeline-date span,
+    .experience-row .timeline-date b {
+        margin-right: 4px;
+    }
+
+    .experience-row .timeline-date b {
+        margin-top: 0;
+    }
+
+    .timeline-marker {
+        grid-row: 1 / span 2;
+    }
+
+    .timeline-dot,
+    .education-row .timeline-dot {
+        margin-top: 3px;
+    }
+
+    .education-timeline::before {
+        top: 13px;
+        bottom: 27px;
+    }
+
+    .timeline-body {
+        grid-column: 3;
+    }
+
+    .education-row {
+        align-items: start;
+        min-height: 0;
+        padding-bottom: 14px;
+    }
+
+    .education-body {
+        grid-template-columns:
+            42px
+            minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+    .edu-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .education-body h3 {
+        font-size: 18px;
+    }
+
+    .education-body a {
+        font-size: 14px;
+    }
+
+    .education-body p {
+        font-size: 14px;
+    }
+
+    .timeline-section-title {
+        margin-top: 24px;
+    }
+}

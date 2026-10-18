@@ -1,0 +1,320 @@
+{
+  "categories": [
+    {
+      "id": "salesforce",
+      "label": "Salesforce"
+    },
+    {
+      "id": "programming",
+      "label": "Programming"
+    },
+    {
+      "id": "web",
+      "label": "Web"
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud"
+    },
+    {
+      "id": "database",
+      "label": "Database"
+    },
+    {
+      "id": "tools",
+      "label": "Tools"
+    }
+  ],
+  "proficiencyRanges": [
+    {
+      "min": 90,
+      "max": 100,
+      "label": "Advanced"
+    },
+    {
+      "min": 75,
+      "max": 89,
+      "label": "Proficient"
+    },
+    {
+      "min": 60,
+      "max": 74,
+      "label": "Intermediate"
+    },
+    {
+      "min": 0,
+      "max": 59,
+      "label": "Foundation"
+    }
+  ],
+  "featuredAreas": [
+    {
+      "category": "salesforce",
+      "icon": "SF",
+      "title": "Salesforce",
+      "description": "CRM platform development, customization and integrations.",
+      "skillIds": ["apex", "lwc", "soql", "salesforce-flow", "rest-apis", "soap"],
+      "proficiencySkillId": "salesforce"
+    },
+    {
+      "category": "programming",
+      "icon": "</>",
+      "title": "Programming",
+      "description": "Core programming, data structures and solution logic.",
+      "skillIds": ["javascript", "java", "python", "c", "sql"],
+      "proficiencySkillId": "javascript"
+    },
+    {
+      "category": "web",
+      "icon": "WEB",
+      "title": "Web Development",
+      "description": "Modern web interfaces, APIs and full-stack foundations.",
+      "skillIds": ["html", "css", "javascript", "rest-apis", "api-integration"],
+      "proficiencySkillId": "rest-apis"
+    },
+    {
+      "category": "cloud",
+      "icon": "CLD",
+      "title": "Cloud & Platforms",
+      "description": "Cloud platforms and deployment environments.",
+      "skillIds": ["aws", "microsoft-azure", "google-cloud-platform"],
+      "proficiencySkillId": "salesforce-platform"
+    },
+    {
+      "category": "database",
+      "icon": "DB",
+      "title": "Databases",
+      "description": "Structured data, SQL querying and database systems.",
+      "skillIds": ["sql", "mysql", "oracle-database"],
+      "proficiencySkillId": "sql"
+    }
+  ],
+  "workWith": [
+    {
+      "title": "Salesforce Development",
+      "skillIds": ["apex", "lwc", "soql", "salesforce-flow", "rest-apis", "soap"]
+    },
+    {
+      "title": "Programming",
+      "skillIds": ["javascript", "java", "python", "c", "sql"]
+    },
+    {
+      "title": "Web Development",
+      "skillIds": ["html", "css", "javascript", "rest-apis", "api-integration"]
+    },
+    {
+      "title": "Cloud & Platforms",
+      "skillIds": ["aws", "microsoft-azure", "google-cloud-platform", "salesforce-platform"]
+    },
+    {
+      "title": "Databases",
+      "skillIds": ["sql", "mysql", "oracle-database"]
+    }
+  ],
+  "skills": [
+    {
+      "id": "apex",
+      "name": "Apex",
+      "icon": "A",
+      "category": "salesforce",
+      "proficiency": 80
+    },
+    {
+      "id": "lwc",
+      "name": "LWC",
+      "icon": "LW",
+      "category": "salesforce",
+      "proficiency": 75
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "icon": "SF",
+      "category": "salesforce",
+      "additionalCategories": ["cloud"],
+      "proficiency": 90
+    },
+    {
+      "id": "soql",
+      "name": "SOQL",
+      "icon": "SO",
+      "category": "salesforce",
+      "proficiency": 90
+    },
+    {
+      "id": "salesforce-flow",
+      "name": "Salesforce Flow",
+      "proficiencyName": "Flows",
+      "icon": "FL",
+      "category": "salesforce",
+      "proficiency": 95
+    },
+    {
+      "id": "rest-apis",
+      "name": "REST APIs",
+      "icon": "API",
+      "category": "salesforce",
+      "additionalCategories": ["web"],
+      "proficiency": 60
+    },
+    {
+      "id": "soap",
+      "name": "SOAP",
+      "icon": "SOAP",
+      "category": "salesforce",
+      "level": "Proficient"
+    },
+    {
+      "id": "salesforce-platform",
+      "name": "Salesforce Platform",
+      "icon": "SP",
+      "category": "salesforce",
+      "additionalCategories": ["cloud"],
+      "level": "Advanced"
+    },
+    {
+      "id": "lwc-quiz-app",
+      "name": "LWC Quiz App",
+      "icon": "LQ",
+      "category": "salesforce",
+      "level": "Project"
+    },
+    {
+      "id": "salesforce-automation",
+      "name": "Salesforce Automation",
+      "icon": "SA",
+      "category": "salesforce",
+      "level": "Proficient"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "icon": "JS",
+      "category": "programming",
+      "additionalCategories": ["web"],
+      "proficiency": 72
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "icon": "J",
+      "category": "programming",
+      "proficiency": 85
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "icon": "PY",
+      "category": "programming",
+      "proficiency": 85
+    },
+    {
+      "id": "c",
+      "name": "C",
+      "icon": "C",
+      "category": "programming",
+      "level": "Proficient"
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "icon": "SQL",
+      "category": "database",
+      "additionalCategories": ["programming"],
+      "proficiency": 90
+    },
+    {
+      "id": "html",
+      "name": "HTML",
+      "icon": "HT",
+      "category": "web",
+      "level": "Proficient"
+    },
+    {
+      "id": "css",
+      "name": "CSS",
+      "icon": "CSS",
+      "category": "web",
+      "level": "Proficient"
+    },
+    {
+      "id": "api-integration",
+      "name": "API Integration",
+      "icon": "AI",
+      "category": "web",
+      "level": "Proficient"
+    },
+    {
+      "id": "full-stack-development",
+      "name": "Full-stack Development",
+      "icon": "FS",
+      "category": "web",
+      "level": "Intermediate"
+    },
+    {
+      "id": "aws",
+      "name": "AWS",
+      "icon": "AWS",
+      "category": "cloud",
+      "level": "Intermediate"
+    },
+    {
+      "id": "microsoft-azure",
+      "name": "Microsoft Azure",
+      "icon": "AZ",
+      "category": "cloud",
+      "level": "Intermediate"
+    },
+    {
+      "id": "google-cloud-platform",
+      "name": "Google Cloud Platform",
+      "icon": "GCP",
+      "category": "cloud",
+      "level": "Foundation"
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "icon": "MY",
+      "category": "database",
+      "level": "Proficient"
+    },
+    {
+      "id": "oracle-database",
+      "name": "Oracle Database",
+      "icon": "OR",
+      "category": "database",
+      "level": "Proficient"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "icon": "GT",
+      "category": "tools",
+      "level": "Proficient"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "icon": "GH",
+      "category": "tools",
+      "level": "Proficient"
+    },
+    {
+      "id": "ci-cd",
+      "name": "CI/CD",
+      "icon": "CI",
+      "category": "tools",
+      "subtitle": "Engineering",
+      "level": "Foundation"
+    },
+    {
+      "id": "agile",
+      "name": "Agile",
+      "icon": "AG",
+      "category": "tools",
+      "subtitle": "Delivery",
+      "level": "Proficient"
+    }
+  ]
+}

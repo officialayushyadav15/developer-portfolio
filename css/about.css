@@ -1,0 +1,74 @@
+
+.about-page{
+    width:calc(100% - var(--sidebar));max-width:none;box-sizing:border-box;min-width:0;margin-right:0;padding:14px 28px 16px;gap:12px}
+.about-page svg{
+    flex:0 0 auto}
+.about-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(360px,456px);align-items:center;gap:34px;min-width:0;padding:0 0 2px;isolation:isolate}
+.about-hero:before{content:"";position:absolute;right:2%;top:4%;z-index:-1;width:430px;height:330px;border-radius:50%;background:radial-gradient(circle,rgba(57,114,255,.16),transparent 68%);filter:blur(24px);pointer-events:none}
+.about-copy{min-width:0;max-width:820px}
+.about-copy h1,.info-panel h2,.what-i-do h2{display:flex;align-items:center;gap:10px;letter-spacing:-.03em}
+.about-copy h1{position:relative;font-size:31px;line-height:1.12}
+.about-copy h1:after{content:"";position:absolute;margin-top:44px;margin-left:0;width:44px;height:1px;background:linear-gradient(90deg,var(--blue),transparent)}
+.about-copy h1 svg,.info-panel h2 svg,.what-i-do h2 svg{width:24px;height:24px;fill:#3972ff;stroke:#3972ff;stroke-width:1.5;filter:drop-shadow(0 0 8px rgba(57,114,255,.48))}
+.about-copy p{max-width:800px;margin-top:18px;color:#e4e9f5;font-size:14px;line-height:1.62}
+.about-copy p+p{margin-top:10px}
+.about-tech-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.about-tech-pills span{display:inline-flex;align-items:center;min-height:31px;border:1px solid #263a5a;border-radius:7px;padding:0 13px;color:#dbe7ff;background:rgba(8,17,29,.52);font-size:11px;transition:transform .2s ease,border-color .2s ease,background .28s ease,box-shadow .28s ease}
+.about-tech-pills span:hover{transform:translateY(-2px);border-color:#5b83d7;background:rgba(30,58,111,.44);box-shadow:0 8px 18px rgba(35,89,255,.17)}
+.about-photo-card{position:relative;justify-self:center;width:min(100%,456px);aspect-ratio:4/3;overflow:hidden;border:1px solid rgba(57,114,255,.86);border-radius:11px;background:linear-gradient(135deg,rgba(13,22,35,.92),rgba(6,13,23,.82));box-shadow:0 22px 58px rgba(0,0,0,.34),0 0 34px rgba(57,114,255,.22),inset 0 0 0 1px rgba(255,255,255,.025)}
+.about-photo-card:before,.about-photo-card:after{content:"";position:absolute;pointer-events:none}
+.about-photo-card:before{inset:-1px;background:radial-gradient(circle at 72% 18%,rgba(101,145,255,.2),transparent 35%),linear-gradient(180deg,rgba(91,137,255,.06),transparent 48%);mix-blend-mode:screen}
+.about-photo-card:after{inset:auto 8% -18% 8%;height:34%;border-radius:50%;background:rgba(57,114,255,.24);filter:blur(26px)}
+.about-photo-card img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;object-position:center 43%}
+.info-panel{padding:14px 24px 16px;border-color:#1b2b40}
+.info-panel h2,.what-i-do h2{font-size:19px}
+.info-panel h2 svg,.what-i-do h2 svg{width:20px;height:20px}
+.info-list{position:relative;overflow:hidden;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;margin-top:10px;border:1px solid #1d2a3b;border-radius:8px;background:linear-gradient(135deg,rgba(10,22,39,.72),rgba(5,12,24,.42));transition:border-color .2s ease,box-shadow .28s ease,background .28s ease}
+.info-list:after,.service-card:after{content:"";position:absolute;inset:0;opacity:0;pointer-events:none;background:radial-gradient(circle at 25% 0,rgba(80,128,255,.2),transparent 45%);transition:opacity .28s ease}
+.info-list:hover{border-color:#34517d;box-shadow:0 13px 25px rgba(35,88,175,.16)}
+.info-list:hover:after,.service-card:hover:after{opacity:0}
+.info-column{position:relative;z-index:1;display:grid;grid-template-rows:repeat(3,1fr);min-width:0}
+.info-column+.info-column{border-left:1px solid rgba(29,42,59,.9)}
+.info-row{display:grid;grid-template-columns:44px minmax(96px,130px) minmax(0,1fr);align-items:center;min-height:50px;padding:7px 24px;border-bottom:1px solid rgba(29,42,59,.9)}
+.info-row:last-child{border-bottom:0}
+.info-column:nth-child(2) .info-row:last-child{border-bottom:1px solid rgba(29,42,59,.9)}
+.info-row-empty{grid-template-columns:1fr}
+.info-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:15px;color:#79a2ff;background:#102342;font-size:11px;font-weight:800;box-shadow:0 0 20px rgba(57,114,255,.13)}
+.info-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.info-icon.role{color:#8eb0ff;background:#14264d}.info-icon.company{color:#80a7ff;background:#112448}.info-icon.location{color:#66a1ff;background:#123660}.info-icon.spec{color:#66a1ff;background:#123660}.info-icon.availability{color:#37dfa0;background:#0e382d}
+.info-row span{color:#f2f6ff;font-size:12px;font-weight:700}.info-row strong{color:#d9e2f1;font-size:13px;font-weight:500;line-height:1.35}.info-row strong i{display:inline-block;width:8px;height:8px;margin-right:7px;border:1px solid rgba(55,223,160,.6);border-radius:50%;background:#1ed05f;box-shadow:0 0 8px #1ed05f}
+.what-i-do{padding:0}
+.service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px;width:100%;align-items:stretch}
+.service-card{position:relative;overflow:hidden;display:flex;min-height:178px;flex-direction:column;padding:20px 20px;border-radius:8px;border-color:#1b2b40;background:linear-gradient(135deg,rgba(13,22,35,.95),rgba(6,13,23,.91));transition:transform .2s ease,border-color .2s ease,background .28s ease,box-shadow .28s ease}
+.service-card:hover{transform:translateY(-4px);border-color:#34517d;box-shadow:0 16px 31px rgba(35,88,175,.18)}
+.service-icon{position:relative;z-index:1;display:grid;place-items:center;width:50px;height:50px;border-radius:50%;font:800 18px/1 Arial;color:#fff;transition:transform .2s ease,filter .2s ease}
+.service-icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.service-card:hover .service-icon{transform:translateY(-2px) scale(1.04);filter:brightness(1.1)}
+.blue-card .service-icon{background:linear-gradient(135deg,#266fff,#143b92);box-shadow:0 0 24px rgba(57,114,255,.27)}.green-card .service-icon{background:linear-gradient(135deg,#2bd66f,#14663d);box-shadow:0 0 24px rgba(30,208,95,.2)}.purple-card .service-icon{background:linear-gradient(135deg,#985cff,#4a2599);box-shadow:0 0 24px rgba(152,92,255,.22)}.amber-card .service-icon{background:linear-gradient(135deg,#ffac25,#8b5207);box-shadow:0 0 24px rgba(255,157,39,.21)}
+.blue-card{border-color:#214276}.green-card{border-color:#1d4b3d}.purple-card{border-color:#3a2c68}.amber-card{border-color:#5a3e19}
+.service-card h3{position:relative;z-index:1;margin-top:10px;font-size:14px;line-height:1.35}.service-card p{position:relative;z-index:1;margin-top:7px;color:#b9c4d5;font-size:11px;line-height:1.55}
+.card-chips{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:10px}
+.card-chips span{border:1px solid rgba(74,111,190,.45);border-radius:999px;padding:6px 11px;background:rgba(22,37,69,.52);color:#d7e5ff;font-size:10px;transition:transform .2s ease,border-color .2s ease,background .28s ease}
+.card-chips span:hover{transform:translateY(-2px);border-color:#6d91e0;background:rgba(47,78,145,.42)}
+body.light-theme .info-panel,body.light-theme .service-card,body.light-theme .about-photo-card{border-color:#b7cafa}
+body.light-theme .about-copy p,body.light-theme .service-card p,body.light-theme .info-row strong{color:#53637b}
+body.light-theme .about-tech-pills span{border-color:#b7cafa;color:#155eef;background:rgba(255,255,255,.52)}
+body.light-theme .info-list{border-color:#e0e7f0;background:rgba(255,255,255,.64)}
+body.light-theme .info-row,body.light-theme .info-column+.info-column{border-color:#e0e7f0}
+body.light-theme .info-column:nth-child(2) .info-row:last-child{border-color:#e0e7f0}
+body.light-theme .info-row span{color:#18253b}
+body.light-theme .about-copy h1 svg,body.light-theme .info-panel h2 svg,body.light-theme .what-i-do h2 svg{color:#155eef;fill:#155eef;stroke:#155eef;filter:none}
+body.light-theme .info-icon{color:#155eef;background:#e7efff;border:1px solid #c6d6ff;box-shadow:none}
+body.light-theme .info-icon.role,body.light-theme .info-icon.company,body.light-theme .info-icon.location,body.light-theme .info-icon.spec{color:#155eef;background:#e7efff}
+body.light-theme .info-icon.availability{color:#07855e;background:#e4f8f0;border-color:#b7ead8}
+body.light-theme .service-icon{box-shadow:none}
+body.light-theme .blue-card .service-icon{background:linear-gradient(135deg,#2563eb,#155eef)}
+body.light-theme .green-card .service-icon{background:linear-gradient(135deg,#059669,#047857)}
+body.light-theme .purple-card .service-icon{background:linear-gradient(135deg,#7c3aed,#5b21b6)}
+body.light-theme .amber-card .service-icon{background:linear-gradient(135deg,#d97706,#a16207)}
+body.light-theme .card-chips span{border-color:#9bb6f0;background:#eaf1ff;color:#173b78}
+@media(min-width:1181px){.about-photo-card{transform:translateX(-150px)}}
+@media(max-width:1180px){.about-page{max-width:none}.about-hero{grid-template-columns:1fr;gap:30px}.about-photo-card{justify-self:center;width:min(100%,520px)}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.info-list{grid-template-columns:1fr 1fr}.info-column:last-child{grid-column:1/-1;border-left:0;border-top:1px solid rgba(29,42,59,.9)}}
+@media(max-width:900px){.about-page{gap:26px}.about-copy{max-width:none}.about-photo-card{order:-1}.info-list{grid-template-columns:1fr}.info-column+.info-column{border-left:0;border-top:1px solid rgba(29,42,59,.9)}}
+@media(max-width:560px){body:has(.about-page){overflow-x:hidden}.dashboard-main.about-page{max-width:100vw}.about-page{gap:24px;width:100%;padding:16px 12px 24px;overflow-x:hidden}.about-hero{gap:24px}.about-copy h1{font-size:28px}.about-copy p{max-width:100%;font-size:12.5px;line-height:1.72}.about-tech-pills span,.card-chips span{font-size:10px}.about-photo-card{width:100%;aspect-ratio:1/1.06}.about-photo-card img{object-position:center center}.info-panel{padding:22px 14px}.info-row{grid-template-columns:40px minmax(86px,.38fr) minmax(0,1fr);min-height:58px;padding:10px 12px}.service-grid{grid-template-columns:1fr;gap:12px}.service-card{min-height:auto;padding:26px 22px}}
+@media(prefers-reduced-motion:reduce){.about-tech-pills span,.service-card,.service-icon,.card-chips span{animation:none;transition:none}}

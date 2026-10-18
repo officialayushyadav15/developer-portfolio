@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Get in touch with Ayush Yadav about Salesforce development, API integrations, and collaboration.">
+        <title>Contact | Ayush Yadav</title>
+        <link rel="icon" type="image/png" href="../IMAGES/LOGO.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/sidebar.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <link rel="stylesheet" href="../css/contact.css">
+    </head>
+    <body>
+        <div class="app-shell">
+            <main class="dashboard-main inner-page contact-page">
+                <section class="contact-heading" aria-labelledby="contact-title">
+                    <span class="contact-availability"><i aria-hidden="true"></i>Available for Opportunities</span>
+                    <h1 id="contact-title">Let's <span>Connect</span></h1>
+                    <p>Have a project in mind or want to talk Salesforce? I’d love to hear from you.</p>
+                </section>
+
+                <div class="contact-layout">
+                    <section class="contact-form-panel panel" aria-labelledby="contact-form-title">
+                        <div class="contact-form-heading">
+                            <span class="contact-form-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m21 3-7.2 18-3.3-7.5L3 10.2 21 3Zm-10.5 10.5L21 3"/></svg></span>
+                            <h2 id="contact-form-title">Send Me a Message</h2>
+                        </div>
+                        <form name="contact" method="POST" action="/pages/contact.html" data-contact-form>
+                            <p class="contact-honeypot" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+                            <div class="contact-field">
+                                <label for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+                                <div class="contact-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg><input id="contact-name" name="name" type="text" placeholder="Enter your full name" minlength="2" maxlength="100" autocomplete="name" required></div>
+                            </div>
+                            <div class="contact-field">
+                                <label for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+                                <div class="contact-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7"/></svg><input id="contact-email" name="email" type="email" placeholder="Enter your email address" maxlength="254" autocomplete="email" required></div>
+                            </div>
+                            <div class="contact-field">
+                                <label for="contact-subject">Subject <span aria-hidden="true">*</span></label>
+                                <div class="contact-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20.6 13.4-7.2 7.2a2 2 0 0 1-2.8 0L3 13V4h9l8.6 8.6a.6.6 0 0 1 0 .8ZM7.5 8.5h.01"/></svg><select id="contact-subject" name="subject" required><option value="" disabled selected>Select a subject</option><option>Salesforce Development</option><option>API Integration</option><option>Lightning Web Components</option><option>Job Opportunity</option><option>Collaboration</option><option>Other</option></select><span class="contact-select-chevron" aria-hidden="true">⌄</span></div>
+                            </div>
+                            <div class="contact-field contact-message-field">
+                                <div class="contact-label-row"><label for="contact-message">Message <span aria-hidden="true">*</span></label><span class="contact-counter" data-message-count>0 / 2000</span></div>
+                                <div class="contact-input-wrap contact-textarea-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v13H8l-4 3V4Zm4 5h8m-8 4h6"/></svg><textarea id="contact-message" name="message" placeholder="Tell me about your project, idea or just say hello..." minlength="10" maxlength="2000" required></textarea></div>
+                            </div>
+                            <button class="contact-submit" type="submit"><span class="contact-spinner" aria-hidden="true"></span><svg class="contact-submit-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 3-7.2 18-3.3-7.5L3 10.2 21 3Z"/></svg><span data-submit-label>Send Message</span><span class="contact-submit-arrow" aria-hidden="true">→</span></button>
+                            <p class="contact-status" data-form-status role="status" aria-live="polite"></p>
+                            <p class="contact-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3m-12 0h14v11H5z"/></svg>Your information is safe with me. I typically respond within 24–48 hours.</p>
+                        </form>
+                    </section>
+
+                    <aside class="contact-info-panel panel" aria-label="Contact information">
+                        <a class="contact-info-card" href="mailto:officialayushyadav15@gmail.com"><span class="contact-info-icon email-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7"/></svg></span><span class="contact-info-copy"><strong>Email</strong><small>officialayushyadav15@gmail.com</small></span><span class="contact-info-chevron" aria-hidden="true">›</span></a>
+                        <a class="contact-info-card" href="https://www.linkedin.com/in/ayush-yadav-dev/" target="_blank" rel="noopener noreferrer"><span class="contact-info-icon linkedin-icon" aria-hidden="true">in</span><span class="contact-info-copy"><strong>LinkedIn</strong><small>Let’s connect professionally</small></span><span class="contact-info-chevron" aria-hidden="true">›</span></a>
+                        <a class="contact-info-card" href="https://github.com/officialayushyadav15" target="_blank" rel="noopener noreferrer"><span class="contact-info-icon github-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.8c-2.5.5-3-1.1-3-1.1-.4-1-1-1.3-1-1.3-.8-.6.1-.6.1-.6.9.1 1.4.9 1.4.9.8 1.3 2.1 1 2.6.7.1-.6.3-1 .6-1.2-2-.2-4.1-1-4.1-4.5 0-1 .4-1.8 1-2.4-.1-.2-.4-1.2.1-2.4 0 0 .8-.3 2.5.9a8.6 8.6 0 0 1 4.6 0c1.8-1.2 2.5-.9 2.5-.9.5 1.3.2 2.2.1 2.4.6.7 1 1.5 1 2.4 0 3.5-2.1 4.3-4.1 4.5.3.3.6.9.6 1.8v2.6c0 .3.2.6.6.5A9.5 9.5 0 0 0 12 2.6Z"/></svg></span><span class="contact-info-copy"><strong>GitHub</strong><small>Explore my projects</small></span><span class="contact-info-chevron" aria-hidden="true">›</span></a>
+                        <div class="contact-info-card"><span class="contact-info-icon location-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Zm-5 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></span><span class="contact-info-copy"><strong>Location</strong><small>India, open to remote opportunities</small></span><span class="contact-info-chevron" aria-hidden="true">›</span></div>
+                        <div class="contact-info-card contact-response-card"><span class="contact-info-icon response-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-13h-7z"/></svg></span><span class="contact-info-copy"><strong>Quick Response</strong><small>I usually reply within 24–48 hours</small></span><span class="contact-info-chevron" aria-hidden="true">›</span></div>
+                    </aside>
+                </div>
+
+                <section class="contact-cta panel" aria-labelledby="contact-cta-title">
+                    <span class="contact-cta-art" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="3"/><path d="m24 24 17-17m-7 0h7v7"/></svg></span>
+                    <div class="contact-cta-copy"><h2 id="contact-cta-title">Let's Build Something <span>Great</span></h2><p>I'm always open to discussing new opportunities, collaborations, or just having a chat about Salesforce and technology. Feel free to reach out!</p></div>
+                    <div class="contact-tags" aria-label="Areas of expertise"><span><b aria-hidden="true">☁</b>Salesforce Development</span><span><b aria-hidden="true">&lt;/&gt;</b>API Integrations</span><span><b aria-hidden="true">ϟ</b>Lightning Web Components</span></div>
+                </section>
+            </main>
+        </div>
+        <script src="../JS/script.js"></script>
+        <script src="../JS/theme.js"></script>
+        <script src="../JS/contact-config.js"></script>
+        <script src="../JS/contact.js"></script>
+    </body>
+</html>
