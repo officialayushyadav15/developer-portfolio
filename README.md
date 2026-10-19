@@ -1,156 +1,157 @@
-# 👨‍💻 Ayush Yadav — Developer Portfolio
+# Ayush Yadav — Developer Portfolio
 
-A personal portfolio for presenting Salesforce development experience, skills, projects, certifications, and a downloadable résumé. The site is built as a static, multi-page website and is configured for Netlify hosting.
+A static, multi-page portfolio presenting Ayush Yadav’s Salesforce development profile, skills, experience, projects, certifications, résumé, and contact information. The site uses HTML, CSS, and browser JavaScript, with Netlify hosting and a server-side contact form integration.
 
-## Table of contents
+- **Live portfolio:** [yadavayushportfolio.netlify.app](https://yadavayushportfolio.netlify.app)
+- **Source repository:** [github.com/officialayushyadav15/developer-portfolio](https://github.com/officialayushyadav15/developer-portfolio)
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technology stack](#technology-stack)
-- [Project structure](#project-structure)
-- [Architecture](#architecture)
-- [Prerequisites and local setup](#prerequisites-and-local-setup)
-- [Usage](#usage)
-- [Configuration and environment variables](#configuration-and-environment-variables)
-- [Contact form workflow](#contact-form-workflow)
-- [Testing and verification](#testing-and-verification)
-- [Deployment](#deployment)
-- [Future improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
-- [Author](#author)
-- [Acknowledgements](#acknowledgements)
+## Visual preview
 
-## Overview
+There is no dedicated, current full-page homepage screenshot in the repository. This is the existing portfolio project-card thumbnail; it is shown as a project asset, not as a full-site screenshot.
 
-The portfolio is a static website that introduces its author and provides dedicated pages for background, skills, experience, projects, certifications, résumé, and contact. Its objectives are to make this information easy to browse, provide links to project repositories and professional profiles, and offer a contact form backed by a server-side integration.
+![Existing portfolio project-card thumbnail, not a current full-page homepage screenshot](IMAGES/project-thumbnails/portfolio-website.jpg)
 
 ## Features
 
-- Home page and dedicated About, Skills, Experience, Projects, Certifications, Résumé, and Contact pages.
-- Responsive styling, shared navigation components, theme and animation scripts, and project imagery.
-- Skills data loaded from `IMAGES/data/skills.json`.
-- Résumé PDF available from the site.
-- Contact submissions routed through a Netlify Function to a Google Apps Script web app, which stores enquiries in Google Sheets and attempts an email notification.
+- Eight linked pages with shared header and sidebar components.
+- Light and dark themes with the selected theme saved in browser storage.
+- Responsive page styles and JavaScript-powered navigation transitions.
+- Skills page content initialized from `IMAGES/data/skills.json` with an HTML fallback.
+- Project cards with local thumbnail images and configured GitHub destinations.
+- Résumé viewing and download links to the repository PDF.
+- Contact form routed through a Netlify Function to Google Apps Script.
+- Page-specific canonical URLs, Open Graph and Twitter/X metadata, homepage JSON-LD, `sitemap.xml`, and `robots.txt`.
 
-## Technology stack
+## Technologies
 
-| Technology | Purpose |
+| Technology | Use in this project |
 | --- | --- |
-| HTML | Page structure and content |
-| CSS | Layout, responsive styling, and visual presentation |
-| Browser JavaScript | Navigation, theme, animation, skills, project links, and contact form behavior |
-| JSON | Data source for the skills page |
-| Netlify Functions (Node.js runtime) | Server-side contact form proxy |
-| Netlify configuration (TOML) | Publish directory, function directory, and response headers |
-| Google Apps Script and Google Sheets | Contact enquiry processing and storage; requires separate configuration |
+| HTML, CSS, JavaScript | Page content, styling, responsive layouts, and browser behavior |
+| JSON | Skills page data |
+| Netlify | Static publishing and the contact serverless function |
+| Node.js | Netlify Function runtime |
+| Google Apps Script and Google Sheets | Contact processing and enquiry storage |
+| Google Fonts (Inter) | Web typography |
 
-The repository has no `package.json` or dependency lockfile. No frontend framework or package manager is configured.
+There is no `package.json`, frontend framework, package manager, or automated test script in this repository. The function is in `netlify/functions/contact.js`; `netlify.toml` sets the publish directory to `.` and the function directory to `netlify/functions`.
+
+## Portfolio pages
+
+| Page | Path | Purpose |
+| --- | --- | --- |
+| Home | [`index.html`](index.html) | Introduction and portfolio overview |
+| About | [`pages/about.html`](pages/about.html) | Personal and professional background |
+| Skills | [`pages/skills.html`](pages/skills.html) | Technical skills and categories |
+| Experience | [`pages/experience.html`](pages/experience.html) | Work experience |
+| Projects | [`pages/projects.html`](pages/projects.html) | Project cards and repository links |
+| Certifications | [`pages/certifications.html`](pages/certifications.html) | Certifications |
+| Resume | [`pages/resume.html`](pages/resume.html) | Embedded résumé preview and download controls |
+| Contact | [`pages/contact.html`](pages/contact.html) | Contact details and enquiry form |
+
+## Selected projects
+
+These repository links match the destinations configured for the project cards. The project page does not configure separate demo URLs.
+
+- [Parkiva](https://github.com/officialayushyadav15/parking_management_system)
+- [AuthentiScan — Fake News Detector](https://github.com/officialayushyadav15/fake-news-detector)
+- [Image Stitching using Seam Carving](https://github.com/officialayushyadav15/seam-carving)
+- [Virtual Mouse](https://github.com/officialayushyadav15/virtual-mouse-using-hand-gesture)
+- [Early Detection of Cardiovascular Disease](https://github.com/officialayushyadav15/early_cardio_vascular_disease_detection_system)
+- [Portfolio Website source](https://github.com/officialayushyadav15/developer-portfolio)
 
 ## Project structure
 
 ```text
 .
-├── apps-script/
-│   └── Code.gs
-├── components/
-│   ├── header.html
-│   └── sidebar.html
-├── css/                         # Page and shared stylesheets
+├── apps-script/Code.gs                 # Apps Script contact handler
+├── components/                         # Shared header and sidebar markup
+├── css/                                # Shared and page-specific stylesheets
 ├── IMAGES/
-│   ├── data/skills.json
-│   ├── project-thumbnails/      # Project card images
+│   ├── data/skills.json                # Skills data
+│   ├── project-thumbnails/             # Project card images
 │   ├── LOGO.png
 │   └── PROFILE.png
-├── JS/                          # Browser scripts, including contact config
-├── netlify/
-│   └── functions/contact.js
-├── pages/                       # About, skills, experience, projects, certifications, résumé, contact
-├── reference/                   # Local reference material; excluded from Git
+├── JS/                                 # Navigation, theme, skills, and form scripts
+├── netlify/functions/contact.js        # Contact form proxy
+├── pages/                              # Seven secondary HTML pages
 ├── RESUME/
 │   └── Ayush_Yadav_Salesforce_Developer_Resume.pdf
-├── .env.example                 # Placeholder template for local Netlify Dev
-├── .gitignore
-├── CONTACT_INTEGRATION.md       # Detailed contact integration setup and behavior
+├── .env.example                        # Local variable-name template
+├── CONTACT_INTEGRATION.md              # Detailed contact setup and verification guide
 ├── index.html
 ├── netlify.toml
+├── robots.txt
+├── sitemap.xml
 └── README.md
 ```
 
-## Architecture
+The `reference/` folder is local reference material excluded by `.gitignore`; it is not required for the site. Do not add local secrets or reference files to a deployment.
 
-Netlify publishes the repository root as static files (`publish = "."`) and discovers serverless functions in `netlify/functions`. The HTML pages load their CSS and browser JavaScript directly; shared header and sidebar files are present under `components/`.
+## Run locally on Windows
 
-The contact page sends JSON to the same-origin `/.netlify/functions/contact` route. The function validates the request and configured origin, then forwards it to the configured Google Apps Script web app with the shared secret held server-side. Apps Script validates the request, saves the enquiry to the configured spreadsheet, and attempts email notification. Detailed setup, retry behavior, and operational limitations are documented in [`CONTACT_INTEGRATION.md`](CONTACT_INTEGRATION.md).
+1. In PowerShell, clone the repository and open it in VS Code, or open an existing project folder. No VS Code extension is required by the project:
 
-## Prerequisites and local setup
+   ```powershell
+   git clone https://github.com/officialayushyadav15/developer-portfolio.git
+   cd developer-portfolio
+   code .
+   ```
 
-To browse the static pages, use a local static HTTP server or open `index.html` in a browser. The contact function will not run from `file://` or a basic static server.
+2. To preview the static site, open a VS Code PowerShell terminal in the project root and start a local HTTP server (Python must be available):
 
-For local development of the contact integration, install Node.js and the Netlify CLI using Netlify's documented installation method. This repository does not pin Node.js or declare a CLI dependency. From PowerShell in the project root:
+   ```powershell
+   py -m http.server 8000
+   ```
 
-```powershell
-Copy-Item .env.example .env
-# Edit .env and replace every placeholder with test-only integration values.
-netlify dev
-```
+   Open [http://localhost:8000](http://localhost:8000). A local HTTP server is needed for the shared header/sidebar and page navigation fetches; opening files directly with `file://` does not exercise those paths.
+3. To run the Netlify Function locally, use Node.js and the Netlify CLI, then run `netlify dev` from the project root. The repository does not install or pin the CLI. Before testing the form, create a local `.env` from `.env.example` if needed and configure **test-only** Apps Script, spreadsheet, notification, and secret values. Do not overwrite an existing `.env` or use production resources for tests.
 
-Use the local URL printed by Netlify Dev. The example origin in `.env.example` is `http://localhost:8888`; if Netlify Dev uses a different origin, set `CONTACT_ALLOWED_ORIGIN` to that exact scheme and host. Configure a test Apps Script deployment, test spreadsheet, and test notification recipient before submitting a valid form. A successful request writes a row and may send email.
+The static HTTP server previews pages only; it does not serve Netlify Functions. Netlify Dev serves the site and the function at `/.netlify/functions/contact`.
 
-## Usage
+## Contact form architecture and configuration
 
-Open `index.html` through a web server or a browser to explore the portfolio. Use the navigation links to visit each section, the résumé controls to view or download the PDF, and the project cards to follow their configured project links. Use the Contact page to submit an enquiry only after its backend has been configured.
+The browser submits JSON to the same-origin Netlify Function. The function validates the configured origin and request, then forwards the request with its server-side shared secret to the Apps Script web app. Apps Script validates the request, records the enquiry in Google Sheets, and attempts an email notification. A saved enquiry and email delivery are separate outcomes; email is not guaranteed exactly once. The function’s in-memory rate limit is best-effort across serverless instances.
 
-## Configuration and environment variables
+The function’s environment variable **names** are:
 
-`.env.example` documents the variable names needed for local Netlify Dev and contains placeholders, not usable credentials. Copy it to the ignored local `.env` file and replace the placeholders with values for test resources. Do not commit `.env`, put secrets in browser-delivered files, or use production credentials for local testing.
+- `GOOGLE_APPS_SCRIPT_URL`
+- `CONTACT_SHARED_SECRET`
+- `CONTACT_ALLOWED_ORIGIN`
 
-| Variable | Purpose |
-| --- | --- |
-| `GOOGLE_APPS_SCRIPT_URL` | Deployed Apps Script web app URL ending in `/exec` |
-| `CONTACT_SHARED_SECRET` | Shared secret checked by Apps Script and sent only by the server-side function |
-| `CONTACT_ALLOWED_ORIGIN` | Exact origin allowed by the function, including scheme and host, without a path or trailing slash |
+Apps Script separately uses these Script Property names: `SPREADSHEET_ID`, `SHEET_NAME`, `NOTIFICATION_EMAIL`, and `CONTACT_SHARED_SECRET`. Configure values privately for each environment; never put secrets in browser-delivered files or commit `.env`. For local development, use test resources. In production, set the function variables in the Netlify site’s environment variable settings and redeploy. The allowed origin must match the site origin exactly. See [`CONTACT_INTEGRATION.md`](CONTACT_INTEGRATION.md) for setup, retry behavior, safeguards, and a test checklist. A successful test submission writes data and may send email, so do not test against production resources casually.
 
-For production, configure these values in the Netlify site's private environment variable settings, with function scope, then deploy again. Apps Script separately requires the `SPREADSHEET_ID`, `SHEET_NAME`, `NOTIFICATION_EMAIL`, and `CONTACT_SHARED_SECRET` script properties. Follow [`CONTACT_INTEGRATION.md`](CONTACT_INTEGRATION.md) for setup and safe test procedures. Never commit secrets or copy a real value into documentation.
+## Résumé
 
-## Contact form workflow
+The actual PDF is [`RESUME/Ayush_Yadav_Salesforce_Developer_Resume.pdf`](RESUME/Ayush_Yadav_Salesforce_Developer_Resume.pdf). The homepage links to it as a download; the Resume page offers download controls and opens the same PDF in its embedded preview.
 
-The browser calls the same-origin Netlify Function configured in `JS/contact-config.js`; it does not call Apps Script directly. The function validates the origin and payload, forwards the request and server-side shared secret to Apps Script, and returns the result to the browser. Apps Script checks the secret, writes and confirms the enquiry row, then attempts notification email and records its status in Google Sheets. Submission IDs support idempotent sheet writes and safe retries, but email delivery is not guaranteed exactly once. The function's in-memory rate limit is best-effort across serverless instances. See [`CONTACT_INTEGRATION.md`](CONTACT_INTEGRATION.md) for the full integration contract and limitations.
+## SEO files
 
-## Testing and verification
+- Each of the eight HTML documents has one self-referencing canonical URL for the production domain.
+- Each page includes Open Graph and Twitter/X card metadata; the configured preview image is `IMAGES/PROFILE.png`.
+- `index.html` contains WebSite and Person JSON-LD.
+- Root `sitemap.xml` lists the eight page URLs, and `robots.txt` permits crawling and points to that sitemap.
 
-No automated test suite or test script is present in the repository. The contact integration guide includes a manual verification checklist. Run it only with separate test spreadsheet, Apps Script deployment, secret, and notification recipient; valid submissions intentionally write data and may send email. No production or end-to-end verification is implied by these instructions.
+These are source-code features; this README does not claim search indexing, ranking, or a measured SEO/performance score.
 
-## Deployment
+## Deploy with Netlify
 
-`netlify.toml` sets the publish directory to the repository root and the function directory to `netlify/functions`. Connect the repository to a Netlify site and deploy with those settings. Configure the three function environment variables in Netlify as described above and in [`CONTACT_INTEGRATION.md`](CONTACT_INTEGRATION.md). Deploy again after changing environment settings. The repository does not identify a live site URL, so none is listed here.
+The current `netlify.toml` publishes the repository root (`.`) and registers `netlify/functions` for functions. No frontend build command or dependency installation is configured.
 
-## Future improvements
+1. In Netlify, connect the GitHub repository [`officialayushyadav15/developer-portfolio`](https://github.com/officialayushyadav15/developer-portfolio) to a site, or use the existing site’s configured Git connection.
+2. Confirm the publish and function directories match `netlify.toml`.
+3. Add the three function environment variables above in Netlify’s private environment settings, with function scope, and set the allowed origin to the deployed site’s exact origin. Configure Apps Script Script Properties separately.
+4. Deploy the selected branch through the existing GitHub–Netlify workflow. Redeploy after changing environment settings.
 
-These are suggestions, not existing functionality:
+The repository files describe the deployment configuration; the current Netlify dashboard settings and live form integration are not verified here.
 
-- Add a repeatable automated check for page links and static assets.
-- Document and pin a supported Node.js version for the Netlify Function.
-- Add stronger provider-level abuse controls if contact-form traffic requires them.
+## Author and links
 
-## Contributing
+**Ayush Yadav — Salesforce Developer**
 
-This is a personal portfolio. For a proposed correction or improvement, open an issue or pull request describing the change and its effect on the site. Preserve the existing static site structure and do not include credentials, private environment files, or local reference materials.
+- [GitHub profile](https://github.com/officialayushyadav15)
+- [LinkedIn](https://www.linkedin.com/in/ayush-yadav-dev/)
+- [Email](mailto:officialayushyadav15@gmail.com)
 
 ## License
 
-No license has been specified in this repository. Reuse permissions should not be assumed.
-
-## Author
-
-**Ayush Yadav** — Salesforce Developer
-
-- [GitHub](https://github.com/officialayushyadav15)
-- [LinkedIn](https://www.linkedin.com/in/ayush-yadav-dev/)
-- Email: `officialayushyadav15@gmail.com`
-
-These profile links and contact details are present in the portfolio source.
-
-## Acknowledgements
-
-The site uses the Inter typeface served by Google Fonts. Portfolio content and project imagery are maintained in this repository.
+No license file or reuse license is specified in the repository. Do not assume that the source or assets are licensed for reuse.
