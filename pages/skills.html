@@ -5,6 +5,22 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="description" content="Explore Ayush Yadav's Salesforce, Apex, LWC, JavaScript, API integration, and cloud development skills.">
         <title>Skills | Ayush Yadav</title>
+        <link rel="canonical" href="https://yadavayushportfolio.netlify.app/pages/skills.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Ayush Yadav">
+        <meta property="og:title" content="Skills | Ayush Yadav">
+        <meta property="og:description" content="Explore Ayush Yadav's Salesforce, Apex, LWC, JavaScript, API integration, and cloud development skills.">
+        <meta property="og:url" content="https://yadavayushportfolio.netlify.app/pages/skills.html">
+        <meta property="og:image" content="https://yadavayushportfolio.netlify.app/IMAGES/PROFILE.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1086">
+        <meta property="og:image:height" content="1448">
+        <meta property="og:image:alt" content="Ayush Yadav">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Skills | Ayush Yadav">
+        <meta name="twitter:description" content="Explore Ayush Yadav's Salesforce, Apex, LWC, JavaScript, API integration, and cloud development skills.">
+        <meta name="twitter:image" content="https://yadavayushportfolio.netlify.app/IMAGES/PROFILE.png">
+        <meta name="twitter:image:alt" content="Ayush Yadav">
         <link rel="icon" type="image/png" href="../IMAGES/LOGO.png">
         <link rel="stylesheet" href="../css/variables.css">
         <link rel="stylesheet" href="../css/style.css">
@@ -31,7 +47,38 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 8h10M7 16h10M4 6l3 2-3 2V6Zm16 8-3 2 3 2v-4Z"/></svg>
                         <h2 id="featured-title">Featured Technology Areas</h2>
                     </div>
-                    <div class="skills-featured-grid" data-skills-featured></div>
+                    <div class="skills-featured-grid" data-skills-featured>
+                        <article class="skills-feature-card">
+                          <div class="skills-card-head"><span class="skills-tech-icon" aria-hidden="true">SF</span><h3>Salesforce</h3></div>
+                          <p>CRM platform development, customization and integrations.</p>
+                          <div class="skills-card-stack">Apex, LWC, SOQL, Salesforce Flow, REST APIs, SOAP</div>
+                          <div class="skills-meter"><div><span>Salesforce</span><strong>90%</strong></div><i style="--value:90%"></i></div>
+                        </article>
+                        <article class="skills-feature-card">
+                          <div class="skills-card-head"><span class="skills-tech-icon" aria-hidden="true">&lt;/&gt;</span><h3>Programming</h3></div>
+                          <p>Core programming, data structures and solution logic.</p>
+                          <div class="skills-card-stack">JavaScript, Java, Python, C, SQL</div>
+                          <div class="skills-meter"><div><span>JavaScript</span><strong>72%</strong></div><i style="--value:72%"></i></div>
+                        </article>
+                        <article class="skills-feature-card">
+                          <div class="skills-card-head"><span class="skills-tech-icon" aria-hidden="true">WEB</span><h3>Web Development</h3></div>
+                          <p>Modern web interfaces, APIs and full-stack foundations.</p>
+                          <div class="skills-card-stack">HTML, CSS, JavaScript, REST APIs, API Integration</div>
+                          <div class="skills-meter"><div><span>REST APIs</span><strong>60%</strong></div><i style="--value:60%"></i></div>
+                        </article>
+                        <article class="skills-feature-card">
+                          <div class="skills-card-head"><span class="skills-tech-icon" aria-hidden="true">CLD</span><h3>Cloud &amp; Platforms</h3></div>
+                          <p>Cloud platforms and deployment environments.</p>
+                          <div class="skills-card-stack">AWS, Microsoft Azure, Google Cloud Platform</div>
+                          <div class="skills-meter"><div><span>Salesforce Platform</span><strong>95%</strong></div><i style="--value:95%"></i></div>
+                        </article>
+                        <article class="skills-feature-card">
+                          <div class="skills-card-head"><span class="skills-tech-icon" aria-hidden="true">DB</span><h3>Databases</h3></div>
+                          <p>Structured data, SQL querying and database systems.</p>
+                          <div class="skills-card-stack">SQL, MySQL, Oracle Database</div>
+                          <div class="skills-meter"><div><span>SQL</span><strong>90%</strong></div><i style="--value:90%"></i></div>
+                        </article>
+                    </div>
                 </section>
 
                 <div class="skills-dashboard">
@@ -42,10 +89,131 @@
                                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 0h6v6h-6v-6Z"/></svg>
                                     <h2 id="stack-title">Technical Stack</h2>
                                 </div>
-                                <div class="skills-filter-group" role="group" aria-label="Filter technical stack" data-stack-filters></div>
+                                <div class="skills-filter-group" role="group" aria-label="Filter technical stack" data-stack-filters>
+                                    <button class="skills-filter is-active" type="button" data-category="all" aria-pressed="true">All</button>
+                                    <button class="skills-filter" type="button" data-category="salesforce" aria-pressed="false">Salesforce</button>
+                                    <button class="skills-filter" type="button" data-category="programming" aria-pressed="false">Programming</button>
+                                    <button class="skills-filter" type="button" data-category="web" aria-pressed="false">Web</button>
+                                    <button class="skills-filter" type="button" data-category="cloud" aria-pressed="false">Cloud</button>
+                                    <button class="skills-filter" type="button" data-category="database" aria-pressed="false">Database</button>
+                                    <button class="skills-filter" type="button" data-category="tools" aria-pressed="false">Tools</button>
+                                </div>
                             </div>
 
-                            <div class="skills-tech-grid" aria-live="polite" data-skills-stack></div>
+                            <div class="skills-tech-grid" aria-live="polite" data-skills-stack>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">A</span>
+                                  <div><h3>Apex</h3><p>Salesforce</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">LW</span>
+                                  <div><h3>LWC</h3><p>Salesforce</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">SF</span>
+                                  <div><h3>Salesforce</h3><p>Salesforce</p><strong>Advanced</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">SO</span>
+                                  <div><h3>SOQL</h3><p>Salesforce</p><strong>Advanced</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">FL</span>
+                                  <div><h3>Salesforce Flow</h3><p>Salesforce</p><strong>Advanced</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">API</span>
+                                  <div><h3>REST APIs</h3><p>Salesforce</p><strong>Intermediate</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">SOAP</span>
+                                  <div><h3>SOAP</h3><p>Salesforce</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">SP</span>
+                                  <div><h3>Salesforce Platform</h3><p>Salesforce</p><strong>Advanced</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">LQ</span>
+                                  <div><h3>LWC Quiz App</h3><p>Salesforce</p><strong>Project</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">SA</span>
+                                  <div><h3>Salesforce Automation</h3><p>Salesforce</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">JS</span>
+                                  <div><h3>JavaScript</h3><p>Programming</p><strong>Intermediate</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">J</span>
+                                  <div><h3>Java</h3><p>Programming</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">PY</span>
+                                  <div><h3>Python</h3><p>Programming</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">C</span>
+                                  <div><h3>C</h3><p>Programming</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">SQL</span>
+                                  <div><h3>SQL</h3><p>Database</p><strong>Advanced</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">HT</span>
+                                  <div><h3>HTML</h3><p>Web</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">CSS</span>
+                                  <div><h3>CSS</h3><p>Web</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">AI</span>
+                                  <div><h3>API Integration</h3><p>Web</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">FS</span>
+                                  <div><h3>Full-stack Development</h3><p>Web</p><strong>Intermediate</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">AWS</span>
+                                  <div><h3>AWS</h3><p>Cloud</p><strong>Intermediate</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">AZ</span>
+                                  <div><h3>Microsoft Azure</h3><p>Cloud</p><strong>Intermediate</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">GCP</span>
+                                  <div><h3>Google Cloud Platform</h3><p>Cloud</p><strong>Foundation</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">MY</span>
+                                  <div><h3>MySQL</h3><p>Database</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">OR</span>
+                                  <div><h3>Oracle Database</h3><p>Database</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">GT</span>
+                                  <div><h3>Git</h3><p>Tools</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">GH</span>
+                                  <div><h3>GitHub</h3><p>Tools</p><strong>Proficient</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">CI</span>
+                                  <div><h3>CI/CD</h3><p>Tools</p><strong>Foundation</strong></div>
+                                </article>
+                                <article class="skills-tech-card">
+                                  <span aria-hidden="true">AG</span>
+                                  <div><h3>Agile</h3><p>Tools</p><strong>Proficient</strong></div>
+                                </article>
+                            </div>
                         </section>
 
                         <section class="skills-section reveal" aria-labelledby="work-title">
@@ -53,7 +221,13 @@
                                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7l8 4 8-4-8-4Zm-8 8 8 4 8-4M4 15l8 4 8-4"/></svg>
                                 <h2 id="work-title">What I Work With</h2>
                             </div>
-                            <div class="skills-work-grid" data-skills-work></div>
+                            <div class="skills-work-grid" data-skills-work>
+                                <article><h3>Salesforce Development</h3><p>Apex, LWC, SOQL, Salesforce Flow, REST APIs, SOAP</p></article>
+                                <article><h3>Programming</h3><p>JavaScript, Java, Python, C, SQL</p></article>
+                                <article><h3>Web Development</h3><p>HTML, CSS, JavaScript, REST APIs, API Integration</p></article>
+                                <article><h3>Cloud &amp; Platforms</h3><p>AWS, Microsoft Azure, Google Cloud Platform, Salesforce Platform</p></article>
+                                <article><h3>Databases</h3><p>SQL, MySQL, Oracle Database</p></article>
+                            </div>
                         </section>
                     </div>
 
@@ -63,7 +237,120 @@
                                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h16M8 16l3-4 3 2 5-7"/></svg>
                                 <h2 id="proficiency-title">Skill Proficiency</h2>
                             </div>
-                            <div class="skills-proficiency-list" aria-live="polite" data-skills-proficiency></div>
+                            <div class="skills-proficiency-list" aria-live="polite" data-skills-proficiency>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Apex</span><em>Proficient</em><strong>80%</strong></div>
+                                  <i style="--value:80%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>LWC</span><em>Proficient</em><strong>75%</strong></div>
+                                  <i style="--value:75%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Salesforce</span><em>Advanced</em><strong>90%</strong></div>
+                                  <i style="--value:90%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>SOQL</span><em>Advanced</em><strong>90%</strong></div>
+                                  <i style="--value:90%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Flows</span><em>Advanced</em><strong>95%</strong></div>
+                                  <i style="--value:95%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>REST APIs</span><em>Intermediate</em><strong>60%</strong></div>
+                                  <i style="--value:60%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>SOAP</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Salesforce Platform</span><em>Advanced</em><strong>95%</strong></div>
+                                  <i style="--value:95%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>LWC Quiz App</span><em>Project</em><strong>60%</strong></div>
+                                  <i style="--value:60%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Salesforce Automation</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>JavaScript</span><em>Intermediate</em><strong>72%</strong></div>
+                                  <i style="--value:72%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Java</span><em>Proficient</em><strong>85%</strong></div>
+                                  <i style="--value:85%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Python</span><em>Proficient</em><strong>85%</strong></div>
+                                  <i style="--value:85%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>C</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>SQL</span><em>Advanced</em><strong>90%</strong></div>
+                                  <i style="--value:90%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>HTML</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>CSS</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>API Integration</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Full-stack Development</span><em>Intermediate</em><strong>67%</strong></div>
+                                  <i style="--value:67%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>AWS</span><em>Intermediate</em><strong>67%</strong></div>
+                                  <i style="--value:67%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Microsoft Azure</span><em>Intermediate</em><strong>67%</strong></div>
+                                  <i style="--value:67%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Google Cloud Platform</span><em>Foundation</em><strong>30%</strong></div>
+                                  <i style="--value:30%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>MySQL</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Oracle Database</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Git</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>GitHub</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>CI/CD</span><em>Foundation</em><strong>30%</strong></div>
+                                  <i style="--value:30%"></i>
+                                </article>
+                                <article class="skills-proficiency-row">
+                                  <div><span>Agile</span><em>Proficient</em><strong>82%</strong></div>
+                                  <i style="--value:82%"></i>
+                                </article>
+                            </div>
                         </section>
                     </aside>
                 </div>

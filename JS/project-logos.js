@@ -1,17 +1,17 @@
 const projectLogos = {
-  parkiva: { src: 'parkiva.png', alt: 'Parkiva project thumbnail' },
-  salesforceQuiz: { src: 'salesforce-quiz.png', alt: 'Salesforce LWC Quiz App project thumbnail' },
-  authentiscan: { src: 'authentiscan.png', alt: 'AuthentiScan project thumbnail' },
-  imageStitching: { src: 'image-stitching.png', alt: 'Image Stitching project thumbnail' },
-  youtubeDownloader: { src: 'youtube-downloader.png', alt: 'YouTube Video Downloader project thumbnail' },
-  virtualMouse: { src: 'virtual-mouse.png', alt: 'Virtual Mouse project thumbnail' },
-  movieRecommendation: { src: 'movie-recommendation.png', alt: 'Movie Recommendation System project thumbnail' },
-  artograph: { src: 'artograph.png', alt: 'Artograph project thumbnail' },
+  parkiva: { src: 'parkiva.jpg', alt: 'Parkiva project thumbnail' },
+  salesforceQuiz: { src: 'salesforce-quiz.jpg', alt: 'Salesforce LWC Quiz App project thumbnail' },
+  authentiscan: { src: 'authentiscan.jpg', alt: 'AuthentiScan project thumbnail' },
+  imageStitching: { src: 'image-stitching.jpg', alt: 'Image Stitching project thumbnail' },
+  youtubeDownloader: { src: 'youtube-downloader.jpg', alt: 'YouTube Video Downloader project thumbnail' },
+  virtualMouse: { src: 'virtual-mouse.jpg', alt: 'Virtual Mouse project thumbnail' },
+  movieRecommendation: { src: 'movie-recommendation.jpg', alt: 'Movie Recommendation System project thumbnail' },
+  artograph: { src: 'artograph.jpg', alt: 'Artograph project thumbnail' },
   licencePlateDetector: { src: 'licence-plate-detector.png', alt: 'Licence Plate Detector project thumbnail' },
-  portfolioWebsite: { src: 'portfolio-website.png', alt: 'Portfolio Website project thumbnail' },
+  portfolioWebsite: { src: 'portfolio-website.jpg', alt: 'Portfolio Website project thumbnail' },
   calculator: { src: 'calculator.png', alt: 'Calculator project thumbnail' },
-  imageGallery: { src: 'image-gallery.png', alt: 'Image Gallery project thumbnail' },
-  cardiovascularDisease: { src: 'cardiovascular-disease.png', alt: 'Cardiovascular Disease Detection project thumbnail' },
+  imageGallery: { src: 'image-gallery.jpg', alt: 'Image Gallery project thumbnail' },
+  cardiovascularDisease: { src: 'cardiovascular-disease.jpg', alt: 'Cardiovascular Disease Detection project thumbnail' },
   abiltex: { src: 'abiltex.png', alt: 'Abiltex project thumbnail' }
 };
 

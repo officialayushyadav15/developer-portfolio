@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
     const fallbackSidebar=`<aside class="sidebar" aria-label="Main navigation">
       <div class="identity">
         <div class="portrait"><img src="${isPagesRoute() ? '../IMAGES/PROFILE.png' : 'IMAGES/PROFILE.png'}" alt="Ayush Yadav"></div>
-        <h1>Ayush Yadav</h1>
+        <strong class="identity-name">Ayush Yadav</strong>
         <p>Salesforce Developer</p>
       </div>
       <nav class="sidebar-nav">
