@@ -10,9 +10,11 @@
     return range?Math.round((range.min+range.max)/2):60;
   };
 
+  const pageInitializations=new WeakMap();
   const initSkillsPage=async()=>{
     const page=document.querySelector('.skills-page');
     if(!page||page.dataset.skillsReady==='true')return;
+    if(pageInitializations.has(page))return pageInitializations.get(page);
 
     const featured=page.querySelector('[data-skills-featured]');
     const filters=page.querySelector('[data-stack-filters]');
@@ -21,7 +23,7 @@
     const work=page.querySelector('[data-skills-work]');
     if(!featured||!filters||!stack||!proficiency||!work)return;
 
-    page.dataset.skillsReady='true';
+    const initialization=(async()=>{
     const response=await fetch(dataUrl());
     if(!response.ok)throw new Error('Unable to load skills data');
     const data=await response.json();
@@ -87,6 +89,15 @@
 
     render();
     window.addEventListener('resize',matchProficiencyHeight);
+    page.dataset.skillsReady='true';
+    })();
+    pageInitializations.set(page,initialization);
+    try {
+      await initialization;
+    } catch (error) {
+      pageInitializations.delete(page);
+      console.error('Skills content could not be initialized.',error);
+    }
   };
 
   window.initSkillsPage=initSkillsPage;
