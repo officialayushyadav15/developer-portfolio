@@ -200,7 +200,14 @@ document.addEventListener('DOMContentLoaded',async()=>{
       }else{
         const script=document.createElement('script');
         script.src=isPagesRoute() ? '../JS/project-links.js' : 'JS/project-links.js';
-        document.body.append(script);
+        await new Promise((resolve,reject)=>{
+          script.addEventListener('load',()=>{
+            window.applyProjectLinks?.();
+            resolve();
+          },{once:true});
+          script.addEventListener('error',reject,{once:true});
+          document.body.append(script);
+        });
       }
     }
     if(/\/skills\.html$/i.test(routeUrl.pathname)){
